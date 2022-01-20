@@ -63,7 +63,9 @@ const HomeScreen = () => {
             ).then((snapshot) => snapshot.docs.map((doc) => doc.id));
 
             const passedUserIds = passes.length > 0 ? passes : ["test"];
-            const swipedUserIds = swipes.length > 0 ? passes : ["test"];
+            const swipedUserIds = swipes.length > 0 ? swipes : ["test"];
+
+            console.log("swiped use ids",swipedUserIds);
 
             unsub = onSnapshot(
                 query(
